@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proveway - Add To Cart</title>
+    <meta name="title" content="Proveway - Add To Cart" />
+    <meta name="despcription" content="Checkout page design" />
+    <meta name="keywords" content="E-commerce,Checkout page" />
+    <meta name="url" content="/" />
+    <meta name="og:title" content="Proveway - Add To Cart" />
+    <meta name="og:despcription" content="Checkout page design" />
+    <meta name="og:url" content="/" />
+    <meta name="twitter:title" content="Proveway - Add To Cart" />
+    <meta name="twitter:despcription" content="Checkout page design" />
+    <meta name="twitter:url" content="/" />
+</head>
+
+<body>
+    <style>
+        /* Inter Fonts import*/
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+        /* theme vars */
+        :root {
+            --primary: #ff6b82;
+            --primary-op: #fdf4f5;
+            --gray: #C8C8C8;
+        }
+
+        * {
+            font-family: "Inter", serif;
+        }
+
+        .coitainer {
+            display: flex;
+            justify-content: center;
+        }
+
+        .content {
+            width: 100%;
+            max-width: 450px;
+        }
+
+        .heading {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            white-space: nowrap;
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        .heading {
+            margin: 0;
+        }
+
+        hr {
+            border: 0.9px solid var(--gray);
+            width: 100%;
+        }
+
+        .wrapper {
+            border: 2px solid var(--gray);
+            cursor: pointer;
+            position: relative;
+            background: white;
+            margin-top: 2rem;
+            padding: 1rem;
+
+        }
+
+        .option {
+            display: flex;
+            align-items: center;
+        }
+
+        input[type="radio"] {
+            width: 1.2rem;
+            aspect-ratio: 1/1;
+            accent-color: #f55971;
+        }
+
+        .option .desp {
+            flex: 1;
+            padding-left: 1rem;
+        }
+
+        .option h3 {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .option h3 span {
+            padding: 0.1rem 0.5rem;
+            margin-left: 0.5rem;
+            background: var(--primary);
+            color: white;
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .option .mrp {
+            color: var(--gray);
+            margin-top: -0.25rem;
+        }
+
+        .active {
+            background: var(--primary-op);
+            border-color: var(--primary);
+        }
+
+        .popular {
+            background: var(--primary);
+            padding: 0.25rem 0.5rem;
+            color: white;
+            font-weight: 500;
+            position: absolute;
+            top: -14px;
+            right: 8px;
+            border-radius: 0 0 4px 4px;
+            box-shadow: 1px 1px 2px #0001;
+        }
+
+        .popular::before,
+        .popular::after {
+            content: "";
+            position: absolute;
+            background: #f3576e;
+            width: 16px;
+            aspect-ratio: 1/1;
+            z-index: -1;
+        }
+
+        .popular::before {
+            left: -6px;
+            top: 3.8px;
+            rotate: -50deg;
+        }
+
+        .popular::after {
+            right: -6px;
+            top: 3.8px;
+            rotate: 50deg;
+
+        }
+
+        .row {
+            display: flex;
+            gap: 1rem;
+            max-width: 250px;
+            margin-top: 1rem;
+            padding-left: 2.5rem;
+            align-items: center;
+        }
+
+        .row div:nth-child(1) {
+            max-width: 8px;
+        }
+
+        .row div {
+            flex: 1;
+        }
+
+        .row select {
+            padding: 0.5rem;
+            width: 100%;
+            border: 2px solid var(--gray);
+            border-radius: 4px;
+        }
+
+
+        .footer {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+        }
+
+        .footer span {
+            color: var(--primary);
+        }
+
+        button {
+            background: var(--primary);
+            color: white;
+            border-radius: 0.25rem;
+            padding: 0.75rem;
+            width: 100%;
+            font-size: medium;
+            border: none;
+            cursor: pointer;
+
+        }
+
+        .powered-by {
+            text-align: end;
+            margin-top: 0.5rem;
+            color: var(--gray);
+        }
+    </style>
+    <main>
+        <div class="coitainer">
+            <div class="content">
+                <br />
+                <h3 class="heading">
+                    <hr>
+                    YAY! It’s BOGO
+                    <hr>
+                </h3>
+                <br />
+                <!-- Card 1 Start-->
+                <div id="1_unit" class="wrapper active">
+                    <div class="option">
+                        <input type="radio" checked />
+                        <div class="desp">
+                            <h3>1 Unit<span>10% Off</span></h3>
+                            <div>Standard Price</div>
+                        </div>
+                        <div class="price">
+                            <h3>$10.00 USD</h3>
+                            <div class="mrp"><s>$24.00 USD</s></div>
+                        </div>
+                    </div>
+                    <div id="cus_def" class="customization"></div>
+                </div>
+                <!-- Card 1 End -->
+
+                <!-- Card 2 Start-->
+                <div id="2_unit" class="wrapper">
+                    <div id="2_unit" class="option">
+                        <input type="radio" />
+                        <div class="desp">
+                            <h3>2 Unit<span>20% Off</span></h3>
+                        </div>
+                        <div class="price">
+                            <h3>$18.00 USD</h3>
+                            <div class="mrp"><s>$24.00 USD</s></div>
+                        </div>
+                    </div>
+                    <div class="popular">MOST POPULAR</div>
+                    <div class="customization "></div>
+                </div>
+                <!-- Card 2 End -->
+
+                <!-- Card 3 Start -->
+                <div id="3_unit" class="wrapper">
+                    <div id="3_unit" class="option">
+                        <input type="radio" />
+                        <div class="desp">
+                            <h3>3 Unit<span>30% Off</span></h3>
+                        </div>
+                        <div class="price">
+                            <h3>$24.00 USD</h3>
+                            <div class="mrp"><s>$24.00 USD</s></div>
+                        </div>
+                    </div>
+                    <div class="customization "></div>
+                </div>
+                <!-- Card 3 End -->
+
+                <!-- Total Start -->
+                <div class="footer">
+                    <span>Free Delivery</span>
+                    <div>Total : $18.00 USD</div>
+                </div>
+                <!-- Total end -->
+                 
+                <button id="submit">+ Add to Cart</button>
+                <div class="powered-by"><i>@ Powered by Pumper</i></div>
+            </div>
+        </div>
+    </main>
+
+
+    <script>
+        const findById = (id) => document.getElementById(id)
+
+        const customization = ` <div class="row">
+                            <div></div>
+                            <div>Size</div>
+                            <div>Colour</div>
+                        </div>
+                        <div class="row">
+                            <div>#1</div>
+                            <div>
+                                <select>
+                                    <option>S</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                </select>
+                            </div>
+                            <div>
+                                <select>
+                                    <option>S</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div>#2</div>
+                            <div>
+                                <select>
+                                    <option>S</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                </select>
+                            </div>
+                            <div>
+                                <select>
+                                    <option>S</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                </select>
+                            </div>
+                        </div>`
+
+        let selected = "1_unit"
+
+        const eles = document.querySelectorAll('.wrapper')
+
+        function onChange() {
+            eles.forEach(ele => {
+                const inp = ele.querySelector('input')
+                // const option = ele.querySelector('.option')
+
+                inp.onchange = e => {
+                    const { checked, value } = e.target
+                    if (checked) {
+                        ele.classList.add('active')
+                        selected = ele.id
+                    } else {
+                        ele.classList.remove('active')
+                    }
+
+                    eles.forEach(op => {
+                        const custom = op.querySelector('.customization')
+                        if (op !== ele) {
+                            custom.innerHTML = ''
+                            op.classList.remove('active');
+                            op.querySelector('input').checked = false;
+                        } else {
+                            custom.innerHTML = customization
+                        }
+                    });
+                }
+
+                ele.onclick = () => {
+                    if (selected == ele.id) return
+                    inp.checked = !inp.checked;
+                    inp.dispatchEvent(new Event('change'));
+                };
+            })
+
+            findById('submit').onclick = () => alert(selected)
+            findById('cus_def').innerHTML = customization
+        }
+
+        window.addEventListener('DOMContentLoaded', onChange)
+
+
+    </script>
+</body>
+
+</html>
